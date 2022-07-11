@@ -1,4 +1,11 @@
-// Write your JavaScript code here!
+const { validateInput, formSubmission } = require("./scriptHelper");
+
+window.addEventListener("load", function(){
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function(){
+       formSubmission(pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput);
+    });
+});
 
 window.addEventListener("load", function() {
 

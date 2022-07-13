@@ -1,5 +1,7 @@
 // require("./scriptHelper");
 
+// const { pickPlanet } = require("./scriptHelper");
+
 // const { formSubmission } = require("./scriptHelper");
 
 // const { validateInput } = require("./scriptHelper");
@@ -7,7 +9,7 @@
     
 
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function(event){
     let form = document.querySelector("form");
     // let list = document.getElementById("faultyItems")
         // list.style.visibility = "visible";
@@ -28,12 +30,23 @@ window.addEventListener("load", function(){
     let cargoLevel = document.querySelector("input[name=cargoMass]"); 
     let list = document.getElementById("faultyItems");     
   
+    let listedPlanets;
+    let listedPlanetsResponse = myFetch();
+    listedPlanetsResponse.then(function (result) {
+     listedPlanets = result
+     console.log(listedPlanets);
+    }).then(function(){
+     console.log(listedPlanets);
+    })
+    let destination = pickPlanet(listedPlanets);
+    console.log("The picked planet is: " + destination);
+    event.preventDefault();
  
 
     form.addEventListener("submit", function(event){
   
         
-        formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
+        // formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
      
          event.preventDefault();
                         });

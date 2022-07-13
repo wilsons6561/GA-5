@@ -1,19 +1,65 @@
 // require("./scriptHelper");
+
+// const { formSubmission } = require("./scriptHelper");
+
+// const { validateInput } = require("./scriptHelper");
+
     
-    pilot = document.querySelector("input[name=pilotName]");
-    copilot = document.querySelector("input[name=copilotName]");
-    fuelLevel = document.querySelector("input[name=fuelLevel]");
-    cargoLevel = document.querySelector("input[name=cargoMass]");
 
 
 window.addEventListener("load", function(){
     let form = document.querySelector("form");
-    form.addEventListener("submit", function(){
-        alert("it got to this point")
-        console.log(pilot.value);
-       formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
+    // let list = document.getElementById("faultyItems")
+        // list.style.visibility = "visible";
+        // let launchStatus = document.getElementById("launchStatus");
+        // launchStatus.style.color = "red";
+    // let pilotStatus = document.getElementById("pilotStatus");
+    // pilotStatus.style.color = "red";
+    // let copilotStatus = document.getElementById("copilotStatus");
+    // copilotStatus.style.color = "blue";
+    // let fuelStatus = document.getElementById("fuelStatus");
+    // fuelStatus.style.color = "red";
+    // let cargoStatus = document.getElementById("cargoStatus");
+    // cargoStatus.style.color = "blue";
+    // launchStatus.innerHTML = `<h2 id="launchStatus" data-testid="launchStatus">Shuttle not ready for launch</h2>`;
+    let pilot = document.querySelector("input[name=pilotName]");
+    let copilot = document.querySelector("input[name=copilotName]");
+    let fuelLevel = document.querySelector("input[name=fuelLevel]");
+    let cargoLevel = document.querySelector("input[name=cargoMass]"); 
+    let list = document.getElementById("faultyItems");     
+  
+ 
+
+    form.addEventListener("submit", function(event){
+  
+        
+        formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
+     
+         event.preventDefault();
+                        });
+                        
+
+    
+
+
+        // let pilot = document.querySelector("input[name=pilotName]");
+        
+        //          if(validateInput(pilot.value) === "Not a Number"){
+        //             {   pilotStatus.innerHTML = `
+        //                <li id="pilotStatus" data-testid="pilotStatus">Pilot ${pilot.value} is ready for launch</li>
+        //                `}   
+        //             } else if (validateInput(pilot.value) === "Is a Number"){
+        //                 alert("Make sure to enter valid information for each field!");
+                        
+        //             } else if (validateInput(pilot.value) === 'Empty'){
+        //                 alert("All fields are required!");
+                        
+        //             };
+        //             event.preventDefault();
+                    
+        
     });
-});
+    
 
 // window.addEventListener("load", function() {
 

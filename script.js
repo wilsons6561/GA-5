@@ -2,6 +2,8 @@
 
 // const { pickPlanet } = require("./scriptHelper");
 
+// const { pickPlanet } = require("./scriptHelper");
+
 // const { formSubmission } = require("./scriptHelper");
 
 // const { validateInput } = require("./scriptHelper");
@@ -32,21 +34,39 @@ window.addEventListener("load", function(event){
   
     let listedPlanets;
     let listedPlanetsResponse = myFetch();
+    
     listedPlanetsResponse.then(function (result) {
      listedPlanets = result
      console.log(listedPlanets);
     }).then(function(){
-     console.log(listedPlanets);
-    })
     let destination = pickPlanet(listedPlanets);
-    console.log("The picked planet is: " + destination);
+    console.log(destination);
+    let name = destination.name;
+    //diameter, star, distance, moons, imageUrl
+    let diameter = destination.diameter;
+    let star = destination.star;
+    let distance = destination.distance;
+    let moons = destination.moons;
+    let imageUrl = destination.image;
+    console.log(diameter);
+    addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl);
+    //  console.log(listedPlanets[0]);
+    })
+
+
+ 
+//    console.log(listedPlanets[0]);
+//    let destination = listedPlanets[index];
+//    console.log(destination);
+    // let destination = pickPlanet(listedPlanets);
+    // console.log("The picked planet is: " + destination);
     event.preventDefault();
  
 
     form.addEventListener("submit", function(event){
   
         
-        // formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
+        formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
      
          event.preventDefault();
                         });

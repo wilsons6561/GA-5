@@ -71,40 +71,9 @@ window.addEventListener("load", function(event){
          event.preventDefault();
                         });
                         
-
-    
-
-
-        // let pilot = document.querySelector("input[name=pilotName]");
-        
-        //          if(validateInput(pilot.value) === "Not a Number"){
-        //             {   pilotStatus.innerHTML = `
-        //                <li id="pilotStatus" data-testid="pilotStatus">Pilot ${pilot.value} is ready for launch</li>
-        //                `}   
-        //             } else if (validateInput(pilot.value) === "Is a Number"){
-        //                 alert("Make sure to enter valid information for each field!");
-                        
-        //             } else if (validateInput(pilot.value) === 'Empty'){
-        //                 alert("All fields are required!");
-                        
-        //             };
-        //             event.preventDefault();
+            event.preventDefault();
                     
         
     });
     
 
-// window.addEventListener("load", function() {
-
-//    let listedPlanets;
-//    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
-//    let listedPlanetsResponse;
-//    listedPlanetsResponse.then(function (result) {
-//        listedPlanets = result;
-//        console.log(listedPlanets);
-//    }).then(function () {
-//        console.log(listedPlanets);
-//        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
-//    })
-   
-// });

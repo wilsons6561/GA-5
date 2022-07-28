@@ -60,7 +60,7 @@ window.addEventListener("load", function(event){
 //    console.log(destination);
     // let destination = pickPlanet(listedPlanets);
     // console.log("The picked planet is: " + destination);
-    event.preventDefault();
+    // event.preventDefault();
  
 
     form.addEventListener("submit", function(event){
